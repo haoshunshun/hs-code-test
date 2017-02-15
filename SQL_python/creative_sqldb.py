@@ -2,7 +2,7 @@
 #!-*- coding: utf-8 -*-
 
 import MySQLdb
-connect = MySQLdb.connect(host="192.168.3.38",uesr="report",passwd="Bayescomrpt100w",db="statisticreport")
+connect = MySQLdb.connect(host="host ip",user="user name",passwd="pass word",db="db name")
 cursor = connect.cursor()
 cursor.execute("drop table if exists table_name")
 sql = """create table table_name (
