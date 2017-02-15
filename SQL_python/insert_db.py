@@ -9,17 +9,17 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_conType_result_"+last_2
     if len(lineStr)>7:
         time=lineStr[0]
         adspotId=lineStr[1]
-#        creativeId=lineStr[2]
-    #    conTy=lineStr[3]
+        creativeId=lineStr[2]
+        conTy=lineStr[3]
         bids=lineStr[4]
-     #   wins=lineStr[5]
-      #  clicks=lineStr[6]
-      #  actives=lineStr[7]
+        wins=lineStr[5]
+        clicks=lineStr[6]
+        actives=lineStr[7]
     else:
         continue
-    db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')
+    db = MySQLdb.connect(host='host ip',user='user name',passwd='pass word',db='db name')
     cursor=db.cursor()
-    cursor.execute("insert into sqlTest values (%s,%s,%s)",[time,adspotId,bids])
+    cursor.execute("insert into table_name values (%s,%s,%s)",[time,adspotId,bids])
     db.commit()
     cursor.close()
     db.close()
