@@ -5,7 +5,7 @@ import MySQLdb
 #创建新文件
 file_name = open("/home/work/disk/nhs/dingxiang/scripts/sql_test","w+")
 # 打开数据库连接
-connect = MySQLdb.connect(host="192.168.3.38",user="report",passwd="Bayescomrpt100w",db="statisticreport")
+connect = MySQLdb.connect(host="",user="",passwd="",db="")
 #获取操作游标
 cursor = connect.cursor()
 #获取当前时间的时间戳
