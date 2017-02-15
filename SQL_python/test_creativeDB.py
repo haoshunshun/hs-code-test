@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import MySQLdb
-db = MySQLdb.connect(host="192.168.3.38",user="report",passwd="Bayescomrpt100w",db="statisticreport")
+db = MySQLdb.connect(host="host ip",user="user name",passwd="pass word",db="db name")
 cursor = db.cursor()
 #cursor.execute('drop table if exists bid_iurl_rlt')
 sql = """CREATE TABLE sql_test (
