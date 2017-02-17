@@ -6,7 +6,7 @@ clkcridDict={}
 wincridDict={}
 # statistic every crid's ctr
 file_name = open("hs_rlt_file","w+")
-for line in open("/Users/haoshun/hs-code-test/bridge_win"):
+for line in open("/Users/haoshun/hs-code-test/sample_data/bridge_win"):
     try:
         line = line.strip()
         jsonObj = json.loads(line)
@@ -19,7 +19,7 @@ for line in open("/Users/haoshun/hs-code-test/bridge_win"):
             wincridDict[crid]["wins"]+=1
     except:
         continue
-for line in open("/Users/haoshun/hs-code-test/bridge_click"):
+for line in open("/Users/haoshun/hs-code-test/sample_data/bridge_click"):
     try:
         line = line.strip()
         jsonObj = json.loads(line)
