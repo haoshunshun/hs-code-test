@@ -2,7 +2,7 @@
 import json
 import os
 from ipip import IP
-pv_file=open('headpv.20161221.log')
+pv_file=open('pv_sample_log')
 pv_ip_rlt=open('head_rlt','w+')
 IP.load(os.path.abspath('/Users/haoshun/hs-code-test/sta_bridge_log/ip_sta/ip_location.dat'))
 for line in pv_file:
