@@ -14,19 +14,20 @@ bidDict={}
 staDict={}
 rltDict={}
 for raw_line in open(file4):
-    logCat=raw_line.strip().split('\t')[0]
-    auction = raw_line.strip().split('\t')[2]
+    clk_line = raw_line.strip().split('\t')
+    auction = clk_line[2]
     clkDict[auction]={"clk"}
 for raw_line in open(file3):
-    logCat=raw_line.strip().split('\t')[0]
-    auction = raw_line.strip().split('\t')[2]
+    win_line = raw_line.strip().split('\t')
+    auction = win_line[2]
     winDict[auction]={"win"}
 for raw_line in open(file2):
-    logCat=raw_line.strip().split('\t')[0]
-    auction = raw_line.strip().split('\t')[2].split("\001")[0]
-    make = raw_line.strip().split('\t')[2].split("\001")[22].split(":")[3]
-    pro = raw_line.strip().split('\t')[2].split("\001")[23].split(":")[1]
-    city = raw_line.strip().split('\t')[2].split("\001")[23].split(":")[2]
+    bid_line = raw_line.strip().split('\t')
+    bid_mes = bid_line[2].split("\001")
+    auction = bid_mes[0]
+    make = bid_mes[22].split(":")[3]
+    pro = bid_mes[23].split(":")[1]
+    city = bid_mes[23].split(":")[2]
     bidDict[auction]={"make":make,"pro":pro,"city":city}
 for k,v in bidDict.items():
     make = v['make']
