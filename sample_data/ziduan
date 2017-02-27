@@ -1,0 +1,14 @@
+mt 代表 meta-type，有效值如下：
+1   Music
+2   Podcasts
+3   Audiobooks
+4   TV Shows
+5   Music Videos
+6   Movies
+7   iPod Games
+8   Mobile Software Applications
+9   Ringtones
+10  iTunes U
+11  E-Books
+12  Desktop Apps
+
