@@ -50,13 +50,15 @@ for key,val in staDict.items():
     wins = val["wins"]
     clks = val["clks"]
     if rltDict.get(iurl,None)==None:
-        rltDict[iurl]={"bids":bids,"wins":wins}
+        rltDict[iurl]={"bids":bids,"wins":wins,"clks":clks}
     else:
         rltDict[iurl]["bids"]+=bids
         rltDict[iurl]["wins"]+=wins
+        rltDict[iurl]["clks"]+=clks
 for ke,va in rltDict.items():
     iurl = ke
     bids  = va["bids"]
     wins = val["wins"]
-    print "%s\t%s\t%s" % (iurl,bids,wins)
+    clks = val["clks"]
+#    print "%s\t%s\t%s" % (iurl,bids,wins)
     print "%s\t%s\t%s\t%s" % (key,val["bids"],val["wins"],val["clks"])
