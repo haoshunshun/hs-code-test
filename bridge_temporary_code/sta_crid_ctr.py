@@ -4,7 +4,6 @@
 import json
 clkcridDict={}
 wincridDict={}
-# statistic every crid's ctr
 file_name = open("hs_rlt_file","w+")
 for line in open("/Users/haoshun/hs-code-test/sample_data/bridge_win"):
     try:
