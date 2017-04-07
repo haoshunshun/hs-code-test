@@ -1,5 +1,5 @@
 #!/bin/usr/python
-#!-*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 import MySQLdb
 import time
 import logging
