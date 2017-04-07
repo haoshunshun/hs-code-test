@@ -1,10 +1,8 @@
 #!/usr/bin/python
-#!-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import time
 import json
-#time active click win bid adspot_id creative_id os connecttype device location price
-#2016110113^I0^I0^I0^I1^I10000074^I100000340^IAndroid^I6^I5.1:46999:2:oppo^I1:100023:-:-::-1:-1^I9999
 staDict={}
 proDict={}
 last_24_hour = time.strftime("%Y%m%d%H", time.localtime(time.time()-3600*24))
@@ -50,4 +48,3 @@ for key,v in staDict.items():
         json_result = json.dumps(jsonRlt,sort_keys=True)
         f_rlt.write("%s\n" % (json_result));
 f_rlt.close()
-#2016110113^I10000074^I100000340^I100028^I1000220^I1^Ihuawei^IAndroid^I4.1^I2^I46999^I1^I1^I0^I0^I4.2e-05

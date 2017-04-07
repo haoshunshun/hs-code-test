@@ -3,7 +3,6 @@
 import MySQLdb
 import time
 last_24_hour = time.strftime("%Y%m%d%H", time.localtime(time.time()-3600*24))
-#/home/work/disk/nhs/dingxiang/log/test_carrier_result_2016112015  2016112015^I10000033^I100000493^I46001^I228^I133^I2^I0^I4.1373
 for line in open("/home/work/disk/nhs/dingxiang/log/test_make_result_"+last_24_hour):
     lineStr=line.split("\t")
     if len(lineStr)>7:
@@ -14,7 +13,6 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_make_result_"+last_24_h
         bids=lineStr[4]
         wins=lineStr[5]
         clicks=lineStr[6]
-#        actives=lineStr[7]
     else:
         continue
     db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')
@@ -31,7 +29,6 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_model_result_"+last_24_
         bids = lineStr[4]
         wins = lineStr[5]
         clicks = lineStr[6]
-#        actives = lineStr[7]
     else:
         continue
     db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')
@@ -48,7 +45,6 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_os_result_"+last_24_hou
         bids=lineStr[4]
         wins=lineStr[5]
         clicks=lineStr[6]
-       # actives=lineStr[7]
     else:
         continue
     db=MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')
@@ -65,7 +61,6 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_carrier_result_"+last_2
         bids=lineStr[4]
         wins=lineStr[5]
         clicks=lineStr[6]
-#        actives=lineStr[7]
     else:
         continue
     db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')
@@ -82,7 +77,6 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_city_result_"+last_24_h
         bids=lineStr[4]
         wins=lineStr[5]
         clicks=lineStr[6]
-#        actives=lineStr[7]
     else:
         continue
     db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')
@@ -99,7 +93,6 @@ for line in open("/home/work/disk/nhs/dingxiang/log/test_conType_result_"+last_2
         bids=lineStr[4]
         wins=lineStr[5]
         clicks=lineStr[6]
-      #  actives=lineStr[7]
     else:
         continue
     db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport')

@@ -4,7 +4,6 @@
 import time
 import sys
 file_rlt = open("rlt_finall","w+")
-#last_hour = time.strftime("%Y%m%d%H",time.localtime(time.time()-3600)
 file2 = '/Users/haoshun/hs-code-test/sta_bidmax_log/damaojiakao/bid.damao.log'
 file3 = '/Users/haoshun/hs-code-test/sta_bidmax_log/damaojiakao/win.damao.log'
 file4 = '/Users/haoshun/hs-code-test/sta_bidmax_log/damaojiakao/click.damao.log'

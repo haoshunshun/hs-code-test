@@ -1,9 +1,8 @@
 #!/usr/bin/python
-#!-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import time
 import json
-#{"active": 0, "adspotid": "10000071", "bids": 1, "carrier": "46002", "city": "1000088", "clicks": 0, "connectType": "2", "costs": 0.0, "creativeid": "100000328", "make": "samsung", "model": "2", "os": "Android", "osv": "5.1", "province": "100018", "time": "2016110817", "wins": 0}
 osDict={}
 carrierDict={}
 cityDict={}
@@ -18,7 +17,6 @@ city_path = open('/home/work/disk/nhs/dingxiang/log/test_city_result_' + last_24
 conType_path = open('/home/work/disk/nhs/dingxiang/log/test_conType_result_'+last_24_hour,'w+')
 make_path = open('/home/work/disk/nhs/dingxiang/log/test_make_result_'+last_24_hour,'w+')
 model_path = open('/home/work/disk/nhs/dingxiang/log/test_model_result_'+last_24_hour,'w+')
-#osv_path = open('/home/work/disk/nhs/dingxiang/log/test_osv_result_'+last_24_hour,'w+')
 for rlt_line in open(rlt_path):
     rlt_str = rlt_line.rstrip("\r\n")
     jsonObj = json.loads(rlt_str)
