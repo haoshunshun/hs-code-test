@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#!-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import time
 last_hour = time.strftime("%Y%m%d%H",time.localtime(time.time()-3600))
 print last_hour
