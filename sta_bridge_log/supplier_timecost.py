@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#!-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import json
 import time
@@ -34,7 +34,6 @@ for key,val in staDict.items():
 	tal_time = val["time"]
 	times = val["times"]
 	means_time = round(tal_time/float(times),4)
-#	print "%s\t%s\t%s\t%s\t%s" % (adspot_id,sup_name,tal_time,times,round(tal_time/float(times),4))
 	connect = MySQLdb.connect(host="192.168.3.38",user="report",passwd="Bayescomrpt100w",db="statisticreport")
 	cursor = connect.cursor()
 	cursor.execute("insert into sup_timecost_rlt values (%s,%s,%s,%s,%s,%s)",[db_time,adspot_id,sup_name,tal_time,times,means_time])

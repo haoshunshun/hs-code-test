@@ -4,14 +4,10 @@ import time
 import MySQLdb
 import os
 last_hour = time.strftime("%Y-%m-%d_%H",time.localtime(time.time()-3600))
-#print last_hour
 bosAddress = 'bos:/hs-test/dataLog_2.0/ssp/Sta/bid_iurl'+last_hour+'/part-00000'
-#bosAddress = 'bos:/hs-test/dataLog_2.0/ssp/Sta/bid_iurl2017-01-23-17/part-00000'
 cpAddress = '/home/work/run_env/hs/'+last_hour+'_iurl_rlt'
-#cpAddress = '/home/work/run_env/hs/2017-01-23_17_iurl_rlt'
 copyBOSFileCommand='/usr/local/bin/bce bos cp '+bosAddress +' '+cpAddress
 os.system(copyBOSFileCommand)
-#print copyBOSFileCommand
 time_tuple = time.strptime(last_hour,"%Y-%m-%d_%H")
 lastTimeBlockStamp = int(time.mktime(time_tuple))
 print lastTimeBlockStamp
@@ -34,6 +30,3 @@ for line in open(cpAddress):
    db.commit()
    cursor.close()
    db.close()
-
-#cmd = 'rm -rf '+cpAddress
-#os.system(cmd)

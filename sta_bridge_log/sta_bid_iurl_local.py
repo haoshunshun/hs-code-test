@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#!-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import json
 import time
 import hashlib
@@ -10,7 +10,6 @@ staDict={}
 time_tuple = time.strptime(last_hour,"%Y-%m-%d_%H")
 lastTimeBlockStamp = int(time.mktime(time_tuple))
 bid_path = '/home/work/run_env/DEPLOY/ssp-report/input/bid.'+last_hour+'.log'
-#iurl_adspot_file = open('/home/work/run_env/hs/iurl/iurl_file_'+last_hour,'w+')
 for bid_line in open(bid_path):
     try:
         if "SUCCESS" in bid_line:
@@ -65,7 +64,6 @@ for k,v in bidDict.items():
     iurl = v["iurl"]
     cnt = v["cnt"]
     bids = v["bids"]
-    #db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayesrpt100w',db='statisticreport')
     db = MySQLdb.connect(host='192.168.3.38',user='report',passwd='Bayescomrpt100w',db='statisticreport',charset='utf8')
     cursor = db.cursor()
     cursor.execute("insert into bid_iurl_rlt values (%s,%s,%s,%s,%s,%s,%s,%s,%s)",[lastTimeBlockStamp,app_id,adspot_id,iurlMd5,cntMd5,supplier,bids,iurl,cnt])

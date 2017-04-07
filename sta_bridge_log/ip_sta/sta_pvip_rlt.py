@@ -10,7 +10,7 @@ try:
             con = lineStr[0]
             pro = lineStr[1]
             city = lineStr[2]
-            pk = "%s\t%s\t%s" % (con,pro,city)
+            pk = "%s\t%s" % (con,pro)
         else:
             continue
         if staDict.get(pk,None)==None:
